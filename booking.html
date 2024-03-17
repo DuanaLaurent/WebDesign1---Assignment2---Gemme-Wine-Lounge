@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Duana Laurent">
+    <meta name="keywords" content="wine, wine lounge">
+    <meta name="description" content="Gemme Wine Lounge offers local, artisan wine in a modern wine lounge"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Gemme Wine Lounge | Home</title>
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8839f852de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"> </script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    
+</head>
+    
+<body>
+    
+    <header>
+
+        <!--Hero section-->
+
+        <div id="booking-hero" class="header-strip">
+
+            <div class="navigation">
+                <!--nav bar-->
+            <nav>
+                <div id="myNav" class="overlay">
+                    <div class="overlay-content">
+                      <a id="close-icon" onclick="closeNav()" href="#"><i class="fa-solid fa-x" title="Close the menu" ></i></a>
+                      <a href="index.html">Home</a>
+                      <a href="menu.html">Menu</a>
+                      <a href="booking.html">Reserve</a>
+                    </div>
+                </div>
+                
+                <div id="nav-bar">
+                    <div>
+                        <img id="logo" src="images/logo-text.png" alt="Gemme logo">
+                    </div>
+                    
+                    <div>   
+                        <a id="menu-icon" onclick="openNav()" href="#"><i class="fa-solid fa-bars" title="Open the menu"></i></a>
+                        <ul id="mainNav">
+                            <li>
+                                <a id="active" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="menu.html">Menu</a>
+                            </li>
+                            <li>
+                                <a id="active" href="booking.html">Reserve</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </nav>
+    
+            </div>
+
+            <div class="hero-text">
+                <h1>
+                    Reserve today.
+                </h1>
+    
+                <p>
+                    Our tables fill quickly so be sure to reserve yours for your next 
+                    special event or wind down. We look forward to serving you soon.
+                </p>
+
+            
+            </div>
+        </div>
+
+    </header>
+
+    <!--Body text on regular background-->
+    <section id="booking">
+        <div class="body-text">
+            <h2>For Couples</h2>
+
+            <p>
+                For the ultimate romantic evening or the perfect night out for
+                you and your bestie, reserve a special table for two at reduced
+                rates. Call us and ask to reserve a dynamic duo table.
+            </p>
+        </div>
+
+        <section class="two-column">
+
+            <div class="empty">
+                <div>
+                    <img class="image-fill" src="images/events-strip.jpg" alt="Tables set with plates, napkins and cutlery">
+                </div>
+            </div>
+    
+            <div class="beige-strip">
+    
+                <div class="case">
+                    <div id="event" class="body-text">
+                        <h2>For Special Events</h2>
+        
+                        <div class="image-text">
+                            <p>
+                                Please call during business hours to make group reservations. We can
+                                accommodate a maximum of 50 persons for special events. However, this
+                                may vary depending on the type of event. All special events come with 
+                                a selection of authentic Neapolitan-style pizzas, enjoyable lighting 
+                                and music, and a private bar close to the Gemme wine cellar.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                
+            </div>
+            
+        </section>
+
+        <!--Booking form section-->
+        <section id="booking-form">
+            <div id="form-head">
+                <h2>Ready to Book?</h2>
+                <p>Fill out the form below to reserve a table:</p>
+
+            </div>
+            
+            <form action="booking.html">
+                <div id="form-layout" class="two-column">
+                    <div class="col-1">
+                        <div class="form-label">
+                            <label for="full-name">Name:</label>
+                        </div>
+    
+                        <div class="form-field">
+                            <input id="full-name" type="text">
+                        </div>
+        
+                        <div class="form-label">
+                            <label for="tel">Phone:</label>
+                        </div>
+        
+                        <div class="form-field">
+                            <input id="tel" type="text">
+                        </div>
+                    </div>
+                    
+                    <div class="col-2">
+                        <div class="form-label">
+                            <label for="mail">Email:</label>
+                        </div>
+    
+                        <div class="form-field">
+                            <input id="mail" type="email">
+                        </div>
+                        
+                        <div id="drop-box" class="form-field">
+                            <div class="last-field">
+                                <label for="quantity">Amount of Guests:</label>
+                                <select id="quantity"> 
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="more">More than 6</option>
+                                </select>
+                            </div>
+        
+                            <div class="last-field">
+                                <label for="time">Reservation Time:</label>
+                                <select id="time">
+                                    <option value="11">11AM</option>
+                                    <option value="12">12PM</option>
+                                    <option value="1">1PM</option>
+                                    <option value="2">2PM</option>
+                                    <option value="3">3PM</option>
+                                    <option value="4">4PM</option>
+                                    <option value="5">5PM</option>
+                                    <option value="6">6PM</option>
+                                    <option value="7">7PM</option>
+                                    <option value="8">8PM</option>
+                                    <option value="9">9PM</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                
+                <!--submit button-->
+                <div class="submit-box">
+                    <a id="submit" href="#"> Book Now </a>
+                </div>
+                
+            </form>
+
+        </section>
+    </section>
+
+    <!--Footer section-->
+    <footer>
+    
+        <section>
+
+            <div id="contact" class="two-column">
+
+                <div id="contact-info">
+                    <div id="address">
+                        <h3>Address</h3>
+            
+                        <p>
+                            <span class="bold-text">Dockyard Drive, English Harbour,</span> 
+                            <br> Saint Paul, Antigua, W.I.
+                        </p>
+
+                        <p>bookings@gemme.com</p>
+
+                        <p>1 (268) 773-9556</p>
+                    </div>
+                </div>
+
+                <div id="hours">
+                    <h3>Hours</h3>
+            
+                    <div id="operating-hours">
+                        <p> <span class="bold-text">Mon - Thu:</span> 11:30am - 11:00pm </p>
+                        <p> <span class="bold-text">Fri - Sat:</span> 11:30am - 12:00am </p>
+                        <p> <span class="bold-text"> Sun:</span> 5:00pm - 10:00pm </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    
+</body>
+</html>

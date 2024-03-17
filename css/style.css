@@ -1,0 +1,602 @@
+/*Import Google fonts*/ 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display&family=Poppins:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Dream';
+    src:  url('fonts/FontsFree-Net-Dream-Avenue.woff2') format('woff')
+}
+
+/* Basic page styling */
+:root {
+    /* These are global variables that you can use in your CSS */
+    --black:black;
+    --beige-orange: #D0ADA7;
+    --beige:#E8D6CB;
+    --white:white;
+    --accent-colour:#B58DB6;
+    --headline-font: 'Dream', serif;
+    --body-font: 'Poppins', sans-serif;
+    --horizontal-shift:6px;
+    --section-padding-top:120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+}
+
+h1 {
+    font-size: calc(40px + (72 - 40) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+}
+
+p, td, th {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 2rem;
+}
+
+a {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--black);
+}
+
+nav a:visited {
+    color: var(--white);
+}
+
+.button-black{
+    border: 1px solid black;
+    color: var(--black);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    width: fit-content;
+}
+
+.button-white {
+    border: 1px solid white;
+    color: var(--white);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    width: fit-content;
+}
+
+.button-black:hover {
+    background-color: var(--accent-colour);
+    color: var(--black);
+    border: none;
+    padding-left: calc(32px + var(--horizontal-shift));
+}
+
+.button-white:hover {
+    background-color: var(--beige);
+    color: var(--black);
+    border: none;
+    padding-left: calc(32px + var(--horizontal-shift));
+}
+
+header {
+    width: 100%;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 40vw;
+    padding-top: 4vh;
+    padding-left: 3vw;
+
+}
+
+
+#logo {
+    flex-basis: 20%;
+    text-align: right;
+    margin-left: 2vw;
+    height: 2.5rem;
+    width: auto;
+}
+
+#header-button {
+    color: white;
+    margin-bottom: 5vh;
+}
+
+#header-button:hover {
+    color: black;
+}
+
+.hero-text, footer {
+    padding: 5% 7%;
+}
+
+footer {
+    background-color: var(--beige);
+    padding-top: 8vh;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+}
+
+.overlay-content {
+    position: absolute;
+    top: 25%;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px; 
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block; 
+    transition: 0.3s; 
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: var(--beige);
+    font-weight: 600;
+}
+
+.overlay #close-icon {
+    position: absolute;
+    top: -60px;
+    right: 30vw;
+    left: 30vw;
+
+}
+
+#mainNav {
+    display: none;
+}
+
+  
+
+/* Styling for the Sections */
+
+.beige-strip {
+    padding: 15% 6%;
+    background-color: var(--beige);
+    margin-top: 0;
+}
+
+.purple-strip {
+    padding: 15% 6%;
+    background-color: var(--accent-colour);
+    margin-top: 0;
+}
+
+.body-text, .info-strip {
+    padding: 15% 7%;
+}
+
+
+/* Specifying design layouts for hero section */
+
+#main-hero, #booking-hero, #menu-hero {
+    height: auto;
+}
+
+#main-hero {
+    background-image: url(images/hero-image.jpg);
+}
+
+#menu-hero {
+    background-image: url(images/menu-hero.jpg);
+}
+
+#booking-hero {
+    background-image: url(images/reserve-hero.jpg);
+}
+
+.header-strip { 
+    object-fit: cover;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.hero-text {
+    padding-top: 9vh;
+}
+
+img {
+    width:100%;
+}
+
+.map-box {
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+}
+
+/* Styling the table */
+.table-box {
+    justify-content: center;
+}
+
+table {
+    flex-wrap: wrap;
+}
+
+td, th {
+    width: 250px;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.light {
+    margin-bottom: 5%;
+}
+
+
+.pairing {
+    padding-bottom: 5vh;
+    color: #5D2E46;
+    font-weight: 500;
+}
+
+/* Styling the form */
+
+#booking-form {
+    padding: 25% 7%;
+    
+}
+
+input, select {
+    width: 80%;
+    padding: 1% 2%;
+    margin-bottom: 4vh;
+    border: 1px solid black;
+    height: 4vh;
+    min-width: 25vw;
+}
+
+
+#submit {
+    background-color: black;
+    font-family: var(--body-font);
+    color: var(--white);
+    padding: 2% 9%;
+}
+
+#operating-hours p {
+    margin-bottom: 0;
+}
+
+@media screen and (max-height: 599px) {
+    .overlay a {font-size: 20px}
+    .overlay #close-icon {
+      font-size: 16px;
+    }
+}
+
+/* Small devices (i.e. tablets in portrait */
+@media (min-width: 600px) {
+    #nav-bar {
+        gap: 25vw;
+    }
+
+    #logo {
+        flex-basis: auto;
+        height: 4rem;
+    }
+    
+    #menu-icon {
+        display: none;
+    }
+
+    #mainNav {
+        display: flex;
+        gap: 12vw;
+        padding-top: 3vh;
+        list-style: none;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+    }
+
+    #active a:link {
+        font-weight: 600;
+    }
+
+    #mainNav a {
+        font-weight: 300;
+    }
+
+}
+/* Medium devices (i.e. tablets in landscape */
+@media (min-width: 700px) {
+    .beige-strip, .purple-strip {
+        padding: 0;
+        flex-basis: 50%;
+    }
+
+    .two-column {
+        display: flex;
+        margin-bottom: 0;
+        justify-content: space-evenly;
+        height: 450px;
+    }
+    
+    .empty{
+        flex-basis: 50%;
+        margin: 0;
+        object-fit: cover;
+    }
+    
+    .image-fill {
+        margin: 0;
+        height: 450px;
+        object-fit: cover;
+    }
+    
+    .case {
+        margin-top: 9vh;
+    }
+    
+    #case-up {
+        margin-top: 8vh;
+    }
+    
+    .body-text, .info-strip {
+        padding: 4% 8%;
+    }
+
+    .table-box {
+        display: flex;
+        justify-content: left;
+    }
+
+    #beige-long, #image-long {
+        height: 500px;
+    }
+
+    table {
+        padding: 2% 3%;
+        table-layout: fixed;
+    }
+    
+    td, th {
+        width: 35vw;
+        text-align: left;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+    }
+
+    #wine-list td, #wine-list th {
+        width: 20vw;
+        margin-bottom: 1vh;
+    }
+
+    tr {
+        display: flex;
+    }
+
+    .light {
+        font-weight: 300;
+        margin-left: 3vw;
+    }
+
+    #wine-list {
+        justify-content: center;
+    }
+
+    #wine-head {
+        text-align: center;
+    }
+    
+    #menu {
+        padding-top: 6%;
+        padding-left: 8%;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    #menu h2{
+        text-align: left;
+        padding-left: 3%;
+    }
+
+    #menu td, #menu th {
+        width: 20vw;
+    }
+
+    .pairing {
+        width: 40vw;
+    }
+
+    footer .two-column{
+        height: 200px;
+        text-align: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    footer .beige-strip {
+        height: 200px;
+    }
+
+    #menu {
+        margin-top: 15vh;
+    }
+
+    #drop-box {
+        display: flex;
+        gap: 3vw;
+    }
+    
+    input, select {
+        width: 100%;
+        color: white;
+        padding: 2%;
+        border: 1px solid black;
+        height: 4vh;
+        min-width: 30vw;
+    }
+    
+    select {
+        min-width: 2vw;
+        color: black;
+        height: 4vh;
+    }
+    
+    #booking-form {
+        padding: 10vh 5vw 0;
+        text-align: center;
+        margin-bottom: 12vh;
+    }
+    
+    #booking-form .two-column {
+        padding-top: 1vh;
+    }
+    
+    .form-field {
+        margin-bottom: 6vh;
+        text-align: left;
+    }
+    
+    .form-label {
+        margin-bottom: 1vh;
+    }
+    
+    
+    #form-layout {
+        gap: 15vw;
+        justify-content: center;
+        text-align: left;
+        height: 40vh;
+    }
+    
+    select label {
+        display: block;
+    }
+    
+    
+    #submit {
+        padding: 1% 4%;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .col-1, .col-2 {
+        height: 40vh;
+    }
+
+
+}
+/* Large devices (i.e. desktop) */
+@media (min-width: 1200px) {
+
+    #logo {
+        flex-basis: 30%;
+        margin-left: 6vw;
+        height:4rem;
+        width: auto;
+    }
+
+    #nav-bar {
+        gap: 35vw;
+        padding-top: 3vh;
+        padding-left: 1vw;
+    
+    }
+
+    #case-up {
+        margin-top: 4vh;
+    }
+
+    .case {
+        margin-top: 4vh;
+    }
+
+    #menu {
+        margin-top: 7vh;
+    }
+
+    input {
+        height: 2vh;
+    }
+
+    .form-field {
+        margin-bottom: 1vh;
+    }
+
+    #form-layout {
+        height: 24vh;
+        margin-bottom: 10vh;
+    }
+
+    footer .two-column{
+        height: 150px;
+    }
+
+    footer {
+        padding-top: 3vh;
+    }
+
+    footer .beige-strip {
+        height: 150px;
+    }
+}
+/* X-Large devices (i.e. big desktop) */
+@media (min-width: 1800px) {
+
+    .hero-text {
+        padding-top: 5vh;
+    }
+
+    #mainNav {
+        margin-top: -2vh;
+    }
+
+    
+
+
+}
