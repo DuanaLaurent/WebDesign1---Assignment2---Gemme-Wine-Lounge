@@ -62,7 +62,7 @@ a:visited {
     color: var(--black);
 }
 
-nav a:visited {
+nav a:visited, nav a:link {
     color: var(--white);
 }
 
